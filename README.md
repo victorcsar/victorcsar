@@ -6,8 +6,8 @@ Olá, sou Victor Cesar! 👨‍💻 Sou apaixonado por desenvolvimento de softwa
 - 💼 Experiência anterior inclui DevOps na empresa [PowerTelecom](https://powertelecom.net.br/home).
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=victorcsar&theme=vision-friendly-dark&show_icons=true" alt="Victor GitHub stats" width="400"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=victorcsar&theme=vision-friendly-dark&layout=compact" alt="Top Langs" width="300"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=victorcsar&theme=vision-friendly-dark&show_icons=true" alt="Victor GitHub stats" width="430"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=victorcsar&theme=vision-friendly-dark&layout=compact" alt="Top Langs" width="325"/>
 </p>
 
 
