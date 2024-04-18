@@ -40,7 +40,7 @@ Olá, sou Victor Cesar! 👨‍💻 Sou apaixonado por desenvolvimento de softwa
 ![LEAFLET](https://img.shields.io/badge/Leaflet-199900?style=for-the-badge&logo=Leaflet&logoColor=white)
 ![LATEX](https://img.shields.io/badge/LaTeX-008080.svg?style=for-the-badge&logo=LaTeX&logoColor=white)
 
-### Eu estou estudando... 🧩
+## Eu estou estudando... 🧩
 ![NGINX](https://img.shields.io/badge/NGINX-009639.svg?style=for-the-badge&logo=NGINX&logoColor=white)
 ![DOCKER](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/Amazon%20AWS-232F3E.svg?style=for-the-badge&logo=Amazon-AWS&logoColor=white)
@@ -54,7 +54,7 @@ Olá, sou Victor Cesar! 👨‍💻 Sou apaixonado por desenvolvimento de softwa
 </p>
 --->
 
-### GitHub Stats ⚡
+## GitHub Stats ⚡
 <div align="center">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=victorcsar&show_icons=true&theme=vision-friendly-dark&include_all_commits=true&count_private=true"/>
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=victorcsar&layout=compact&langs_count=7&theme=vision-friendly-dark"/>
