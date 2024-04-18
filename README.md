@@ -5,7 +5,11 @@ Olá, sou Victor Cesar! 👨‍💻 Sou apaixonado por desenvolvimento de softwa
 - 🎓 Graduando em Análise e Desenvolvimento de Sistemas na Uniasselvi.
 - 💼 Experiência anterior inclui DevOps na empresa [PowerTelecom](https://powertelecom.net.br/home).
 
-![Victor GitHub stats](https://github-readme-stats.vercel.app/api?username=victorcsar&theme=dark&show_icons=true)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=victorcsar&theme=vision-friendly-dark&show_icons=true" alt="Victor GitHub stats" width="460"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=victorcsar&theme=vision-friendly-dark&layout=compact" alt="Top Langs" width="350"/>
+</p>
+
 
 ## Obrigado por Visitar!
 
