@@ -64,7 +64,7 @@ Olá, sou Victor Cesar! 👨‍💻 Sou apaixonado por desenvolvimento de softwa
 <div>
   <a href="https://br.linkedin.com/in/victor-cesar-bastos" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>   
   <a href="https://instagram.com/vthorcs" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-  <a href=""mailto:contato.victorcesagx@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335.svg?style=for-the-badge&logo=Gmail&logoColor=white" >  </a>
+  <a href="mailto:contato.victorcesagx@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-EA4335.svg?style=for-the-badge&logo=Gmail&logoColor=white" target="_blank">  </a>
 </div>
 
 
