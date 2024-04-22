@@ -1,4 +1,4 @@
-# Bem-vindo ao Meu GitHub 👋 ![ProVisitor](https://komarev.com/ghpvc/?username=victorcsar&color=blue)
+# Bem-vindo ao Meu GitHub 👋 <a href="https://github.com/antonkomarev/github-profile-views-counter"><img align="right" src="https://komarev.com/ghpvc/?username=victorcsar&color=blue&style=flat"></a>
 
 Olá, sou Victor Cesar! 👨‍💻 Sou apaixonado por desenvolvimento de software e estou sempre buscando aprender coisas novas.
 
