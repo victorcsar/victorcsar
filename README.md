@@ -2,7 +2,8 @@
 
 Olá, sou Victor Cesar! 👨‍💻 Sou apaixonado por desenvolvimento de software e estou sempre buscando aprender coisas novas.
 
-- 🎓 Graduando em Análise e Desenvolvimento de Sistemas na Uniasselvi.
+- 🎓 Graduado em Análise e Desenvolvimento de Sistemas.
+- 🎓 Graduando em Engenharia de Software.
 - 💼 Experiência anterior inclui DevOps na empresa [PowerTelecom](https://powertelecom.net.br/home).
 
 ## Eu já trabalhei com... 🔧
