@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 60" width="232" height="60" role="img" aria-label="LinkedIn">
+  <title>LinkedIn</title>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .bg { fill: #f8fafc; }
+    .rule { fill: #e2e8f0; }
+    .fg { fill: #0f172a; }
+    .muted { fill: #64748b; }
+    .prompt { fill: #0284c7; }
+    .accent { fill: #2563eb; }
+    .ok { fill: #16a34a; }
+    .logo { fill: #0f172a; }
+    .b { font-weight: 600; }
+
+  </style>
+  
+  <rect x=".5" y=".5" width="231" height="59" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="116" y="37" font-size="17" class="accent" text-anchor="middle">LinkedIn<tspan class="muted"> ↗</tspan></text>
+</svg>

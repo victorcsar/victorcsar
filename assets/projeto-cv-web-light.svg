@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 84" width="720" height="84" role="img" aria-label="cv-web: Meu currículo online, no ar em victorcesar.com.br.">
+  <title>cv-web: Meu currículo online, no ar em victorcesar.com.br.</title>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .bg { fill: #f8fafc; }
+    .rule { fill: #e2e8f0; }
+    .fg { fill: #0f172a; }
+    .muted { fill: #64748b; }
+    .prompt { fill: #0284c7; }
+    .accent { fill: #2563eb; }
+    .ok { fill: #16a34a; }
+    .logo { fill: #0f172a; }
+    .b { font-weight: 600; }
+
+  </style>
+  
+  <rect x=".5" y=".5" width="719" height="83" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="28" y="36" font-size="16" class="muted">~/projetos/<tspan class="accent b" font-size="19">cv-web</tspan></text>
+  <text x="692" y="36" font-size="15" class="muted" text-anchor="end">abrir ↗</text>
+  <text x="28" y="64" font-size="16" class="fg">Meu currículo online, no ar em victorcesar.com.br</text>
+</svg>

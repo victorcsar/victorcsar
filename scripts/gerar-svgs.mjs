@@ -1,8 +1,9 @@
 // Gera os painéis SVG do README em versão clara e escura.
 // Uso: node scripts/gerar-svgs.mjs
 //
-// O conteúdo (textos, sistemas e stack) fica todo aqui. Depois de mudar algo,
-// rode o script de novo e commite os arquivos de assets/.
+// O conteúdo (textos, sistemas, stack, projetos e contatos) fica todo aqui. Depois de mudar
+// algo, rode o script de novo e commite os arquivos de assets/. Se mudar um texto, confira
+// também o texto alternativo (alt) da imagem no README.md.
 
 import { writeFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -21,17 +22,42 @@ const perfil = {
   usuarios: '3.000',
 };
 
-const sistemas = [
-  ['app-cliente', '~3.000 usuários/dia'],
-  ['assinatura-contratos', 'centenas de contratos/mês'],
-  ['plataforma-rh', '~100 colaboradores'],
-  ['servidores', '15 aplicações migradas'],
-];
+const sistemas = {
+  comentario: '# provedora de internet, da arquitetura ao deploy',
+  lista: [
+    ['app-cliente', '~3.000 usuários/dia'],
+    ['assinatura-contratos', 'centenas de contratos/mês'],
+    ['plataforma-rh', '~100 colaboradores'],
+    ['servidores', '15 aplicações migradas'],
+  ],
+};
 
 const stack = [
-  'TypeScript', 'NestJS', 'Express', 'Prisma', 'Python', 'React', 'Next.js', 'Tailwind CSS',
-  'PostgreSQL', 'Redis', 'MongoDB', 'BullMQ', 'Linux', 'Docker', 'Nginx', 'PM2', "Let's Encrypt", 'AWS',
+  ['frontend', ['React', 'Next.js', 'Tailwind CSS']],
+  ['backend', ['TypeScript', 'NestJS', 'Express', 'Prisma', 'Python']],
+  ['dados', ['PostgreSQL', 'Redis', 'MongoDB', 'BullMQ']],
+  ['infra', ['Linux', 'Docker', 'Nginx', 'PM2', "Let's Encrypt"]],
+  ['cloud', ['AWS Certified Cloud Practitioner']],
 ];
+
+// O nome do arquivo de cada projeto é projeto-<nome>-<tema>.svg
+const projetos = [
+  ['oficinaFlow', 'Gestão de oficina mecânica: orçamentos, O.S. e estoque'],
+  ['cv-web', 'Meu currículo online, no ar em victorcesar.com.br'],
+  ['curriculo', 'O mesmo currículo, em LaTeX'],
+];
+
+// O nome do arquivo de cada contato é contato-<id>-<tema>.svg
+const contatos = [
+  ['site', 'victorcesar.com.br'],
+  ['linkedin', 'LinkedIn'],
+  ['email', 'e-mail'],
+];
+
+// Tempo de um ciclo do `watch docker ps`, em segundos
+const CICLO_PS = 5;
+// Quanto tempo a seleção fica em cada camada da stack, em segundos
+const PASSO_STACK = 2.5;
 
 // ---------------------------------------------------------------- temas
 
@@ -73,11 +99,11 @@ const estilo = (c, animacoes) => `<style>
 ${animacoes}
   </style>`;
 
-const svg = ({ h, label, c, animacoes, defs = '', corpo }) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${h}" width="${W}" height="${h}" role="img" aria-label="${esc(label)}">
+const svg = ({ w = W, h, label, c, animacoes = '', defs = '', corpo }) => `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}" role="img" aria-label="${esc(label)}">
   <title>${esc(label)}</title>
   ${estilo(c, animacoes)}
   ${defs ? `<defs>${defs}</defs>` : ''}
-  <rect x=".5" y=".5" width="${W - 1}" height="${h - 1}" rx="6" fill="${c.bg}" stroke="${c.rule}"/>
+  <rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="6" fill="${c.bg}" stroke="${c.rule}"/>
   ${corpo}
 </svg>
 `;
@@ -129,95 +155,111 @@ const header = (c) => svg({
 
 // ---------------------------------------------------------------- watch docker ps
 
-// A barra enche a cada 2 s, como o `watch`, e as linhas piscam juntas na atualização.
+// A barra enche a cada ciclo, como o `watch`, e as linhas piscam juntas na atualização.
 // Os pontos de status pulsam um depois do outro. Tudo em ciclo, para quem rolar até aqui ainda ver.
 const animPs = `
-    .refresh { transform-box: fill-box; transform-origin: left; animation: refresh 2s linear infinite; }
+    .refresh { transform-box: fill-box; transform-origin: left; animation: refresh ${CICLO_PS}s linear infinite; }
     @keyframes refresh { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-in-out var(--d) infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse ${CICLO_PS / 2}s ease-in-out var(--d) infinite; }
     @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .35; transform: scale(.7); } }
-    .rows { animation: rows 2s steps(1) infinite; }
-    @keyframes rows { 0% { opacity: .55; } 6% { opacity: 1; } }
+    .rows { animation: rows ${CICLO_PS}s steps(1) infinite; }
+    @keyframes rows { 0% { opacity: .55; } 4% { opacity: 1; } }
     @media (prefers-reduced-motion: reduce) { .refresh, .pulse, .rows { animation: none; } }`;
 
 const dockerPs = (c) => svg({
-  h: 112 + sistemas.length * 42,
+  h: 140 + sistemas.lista.length * 42,
   c,
-  label: 'watch docker ps. ' + sistemas.map(([n, e]) => `${n}: no ar, ${e}.`).join(' '),
+  label: `watch docker ps. Sistemas de uma provedora de internet, da arquitetura ao deploy. ` +
+    sistemas.lista.map(([n, e]) => `${n}: no ar, ${e}.`).join(' '),
   animacoes: animPs,
   corpo: `${prompt(42, 'watch docker ps')}
-  ${txt(692, 42, 'muted', 14, 'a cada 2,0s', ' text-anchor="end"')}
-  <rect x="28" y="58" width="664" height="2" class="rule"/>
-  <rect x="28" y="58" width="664" height="2" class="prompt refresh"/>
+  ${txt(692, 42, 'muted', 14, `a cada ${CICLO_PS.toFixed(1).replace('.', ',')}s`, ' text-anchor="end"')}
+  ${txt(28, 70, 'muted', 15, esc(sistemas.comentario))}
+  <rect x="28" y="86" width="664" height="2" class="rule"/>
+  <rect x="28" y="86" width="664" height="2" class="prompt refresh"/>
 
-  ${txt(28, 96, 'muted', 13, 'SISTEMA', ' letter-spacing="1.5"')}
-  ${txt(300, 96, 'muted', 13, 'STATUS', ' letter-spacing="1.5"')}
-  ${txt(400, 96, 'muted', 13, 'ESCALA', ' letter-spacing="1.5"')}
+  ${txt(28, 124, 'muted', 13, 'SISTEMA', ' letter-spacing="1.5"')}
+  ${txt(300, 124, 'muted', 13, 'STATUS', ' letter-spacing="1.5"')}
+  ${txt(400, 124, 'muted', 13, 'ESCALA', ' letter-spacing="1.5"')}
 
   <g class="rows">
-${sistemas.map(([nome, escala], i) => {
-  const y = 140 + i * 42;
+${sistemas.lista.map(([nome, escala], i) => {
+  const y = 168 + i * 42;
   return `    ${txt(28, y, 'fg b', 18, esc(nome))}
-    <circle cx="306" cy="${y - 6}" r="5" class="ok pulse" style="--d: ${i * 0.25}s"/>
+    <circle cx="306" cy="${y - 6}" r="5" class="ok pulse" style="--d: ${(i * 0.4).toFixed(1)}s"/>
     ${txt(320, y, 'ok', 17, 'up')}
     ${txt(400, y, 'accent', 17, esc(escala))}`;
 }).join('\n')}
   </g>`,
 });
 
-// ---------------------------------------------------------------- stack correndo
+// ---------------------------------------------------------------- cat stack.yml
 
-const animStack = (loop) => `
-    .ticker { animation: ticker ${(loop / 45).toFixed(1)}s linear infinite; }
-    @keyframes ticker { to { transform: translateX(-${loop}px); } }
-    @media (prefers-reduced-motion: reduce) { .ticker { animation: none; } }`;
+// Tudo fica parado e legível. Só uma seleção desce pelas camadas, uma por vez,
+// como num menu de terminal.
+const LINHA = 40;
+const animStack = `
+    .sel { animation: sel ${PASSO_STACK * stack.length}s steps(${stack.length}) infinite; }
+    @keyframes sel { to { transform: translateY(${LINHA * stack.length}px); } }
+    @media (prefers-reduced-motion: reduce) { .sel { animation: none; } }`;
 
 const stackSvg = (c) => {
-  // Posições fixas por item: o laço fecha certinho mesmo se a fonte do visitante for outra.
-  let x = 0;
-  let itens = '';
-  for (const s of stack) {
-    itens += txt(x, 0, 'fg', 17, esc(s));
-    x += s.length * 10.4 + 18;
-    itens += txt(x, 0, 'muted', 17, '·');
-    x += 28;
-  }
-  const loop = Math.round(x);
-  const esq = 112;
-  const dir = 704;
-
+  const topo = 92;
+  // Colunas pela largura da maior palavra de cada uma (fonte de 16 px ≈ 9,6 px por letra)
+  const colunas = [140, 256, 346, 436, 522];
   return svg({
-    h: 76,
+    h: topo + stack.length * LINHA,
     c,
-    label: 'Stack: ' + stack.join(', ') + '.',
-    animacoes: animStack(loop),
-    defs: `<clipPath id="faixa"><rect x="${esq}" y="1" width="${dir - esq}" height="74"/></clipPath>
-    <linearGradient id="some-esq"><stop offset="0" stop-color="${c.bg}"/><stop offset="1" stop-color="${c.bg}" stop-opacity="0"/></linearGradient>
-    <linearGradient id="some-dir"><stop offset="0" stop-color="${c.bg}" stop-opacity="0"/><stop offset="1" stop-color="${c.bg}"/></linearGradient>`,
-    corpo: `<g clip-path="url(#faixa)">
-    <g class="ticker">
-      <g transform="translate(${esq + 8} 46)">
-        ${itens}
-        <g transform="translate(${loop} 0)">${itens}</g>
-      </g>
-    </g>
+    label: 'Stack. ' + stack.map(([k, v]) => `${k}: ${v.join(', ')}.`).join(' '),
+    animacoes: animStack,
+    corpo: `${prompt(42, 'cat stack.yml')}
+  <g class="sel">
+    <rect x="14" y="${topo - 26}" width="${W - 28}" height="34" rx="4" fill="${c.accent}" fill-opacity=".12"/>
+    ${txt(20, topo - 3, 'prompt', 17, '›')}
   </g>
-  <rect x="${esq}" y="1" width="28" height="74" fill="url(#some-esq)"/>
-  <rect x="${dir - 48}" y="1" width="48" height="74" fill="url(#some-dir)"/>
-  ${txt(28, 46, 'prompt', 17, 'stack')}
-  ${txt(84, 46, 'muted', 17, '›')}`,
+${stack.map(([camada, itens], i) => {
+  const y = topo + i * LINHA - 3;
+  return `  ${txt(40, y, 'accent', 16, esc(camada) + ':')}\n` +
+    itens.map((item, j) => `  ${txt(colunas[j], y, 'fg', 16, esc(item))}`).join('\n');
+}).join('\n')}`,
   });
 };
 
+// ---------------------------------------------------------------- projetos (uma imagem por link)
+
+const projeto = ([nome, desc]) => (c) => svg({
+  h: 84,
+  c,
+  label: `${nome}: ${desc}.`,
+  corpo: `${txt(28, 36, 'muted', 16, `~/projetos/<tspan class="accent b" font-size="19">${esc(nome)}</tspan>`)}
+  ${txt(692, 36, 'muted', 15, 'abrir ↗', ' text-anchor="end"')}
+  ${txt(28, 64, 'fg', 16, esc(desc))}`,
+});
+
+// ---------------------------------------------------------------- contatos (três botões lado a lado)
+
+const contato = ([, rotulo]) => (c) => svg({
+  w: 232,
+  h: 60,
+  c,
+  label: rotulo,
+  corpo: txt(116, 37, 'accent', 17, `${esc(rotulo)}<tspan class="muted"> ↗</tspan>`, ' text-anchor="middle"'),
+});
+
 // ---------------------------------------------------------------- saída
 
-const paineis = { header, 'docker-ps': dockerPs, stack: stackSvg };
+const paineis = {
+  header,
+  'docker-ps': dockerPs,
+  stack: stackSvg,
+  ...Object.fromEntries(projetos.map((p) => [`projeto-${p[0]}`, projeto(p)])),
+  ...Object.fromEntries(contatos.map((p) => [`contato-${p[0]}`, contato(p)])),
+};
 
 mkdirSync(ASSETS, { recursive: true });
 for (const [nome, gerar] of Object.entries(paineis)) {
   for (const [tema, cores] of Object.entries(temas)) {
-    const arquivo = join(ASSETS, `${nome}-${tema}.svg`);
-    writeFileSync(arquivo, gerar(cores));
+    writeFileSync(join(ASSETS, `${nome}-${tema}.svg`), gerar(cores));
     console.log(`assets/${nome}-${tema}.svg`);
   }
 }

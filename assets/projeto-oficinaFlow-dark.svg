@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 84" width="720" height="84" role="img" aria-label="oficinaFlow: Gestão de oficina mecânica: orçamentos, O.S. e estoque.">
+  <title>oficinaFlow: Gestão de oficina mecânica: orçamentos, O.S. e estoque.</title>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .bg { fill: #020617; }
+    .rule { fill: #1e293b; }
+    .fg { fill: #e2e8f0; }
+    .muted { fill: #94a3b8; }
+    .prompt { fill: #38bdf8; }
+    .accent { fill: #60a5fa; }
+    .ok { fill: #4ade80; }
+    .logo { fill: #ffffff; }
+    .b { font-weight: 600; }
+
+  </style>
+  
+  <rect x=".5" y=".5" width="719" height="83" rx="6" fill="#020617" stroke="#1e293b"/>
+  <text x="28" y="36" font-size="16" class="muted">~/projetos/<tspan class="accent b" font-size="19">oficinaFlow</tspan></text>
+  <text x="692" y="36" font-size="15" class="muted" text-anchor="end">abrir ↗</text>
+  <text x="28" y="64" font-size="16" class="fg">Gestão de oficina mecânica: orçamentos, O.S. e estoque</text>
+</svg>

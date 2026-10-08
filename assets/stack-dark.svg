@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 76" width="720" height="76" role="img" aria-label="Stack: TypeScript, NestJS, Express, Prisma, Python, React, Next.js, Tailwind CSS, PostgreSQL, Redis, MongoDB, BullMQ, Linux, Docker, Nginx, PM2, Let's Encrypt, AWS.">
-  <title>Stack: TypeScript, NestJS, Express, Prisma, Python, React, Next.js, Tailwind CSS, PostgreSQL, Redis, MongoDB, BullMQ, Linux, Docker, Nginx, PM2, Let's Encrypt, AWS.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 292" width="720" height="292" role="img" aria-label="Stack. frontend: React, Next.js, Tailwind CSS. backend: TypeScript, NestJS, Express, Prisma, Python. dados: PostgreSQL, Redis, MongoDB, BullMQ. infra: Linux, Docker, Nginx, PM2, Let's Encrypt. cloud: AWS Certified Cloud Practitioner.">
+  <title>Stack. frontend: React, Next.js, Tailwind CSS. backend: TypeScript, NestJS, Express, Prisma, Python. dados: PostgreSQL, Redis, MongoDB, BullMQ. infra: Linux, Docker, Nginx, PM2, Let's Encrypt. cloud: AWS Certified Cloud Practitioner.</title>
   <style>
     text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
     .bg { fill: #020617; }
@@ -12,24 +12,38 @@
     .logo { fill: #ffffff; }
     .b { font-weight: 600; }
 
-    .ticker { animation: ticker 46.6s linear infinite; }
-    @keyframes ticker { to { transform: translateX(-2097px); } }
-    @media (prefers-reduced-motion: reduce) { .ticker { animation: none; } }
+    .sel { animation: sel 12.5s steps(5) infinite; }
+    @keyframes sel { to { transform: translateY(200px); } }
+    @media (prefers-reduced-motion: reduce) { .sel { animation: none; } }
   </style>
-  <defs><clipPath id="faixa"><rect x="112" y="1" width="592" height="74"/></clipPath>
-    <linearGradient id="some-esq"><stop offset="0" stop-color="#020617"/><stop offset="1" stop-color="#020617" stop-opacity="0"/></linearGradient>
-    <linearGradient id="some-dir"><stop offset="0" stop-color="#020617" stop-opacity="0"/><stop offset="1" stop-color="#020617"/></linearGradient></defs>
-  <rect x=".5" y=".5" width="719" height="75" rx="6" fill="#020617" stroke="#1e293b"/>
-  <g clip-path="url(#faixa)">
-    <g class="ticker">
-      <g transform="translate(120 46)">
-        <text x="0" y="0" font-size="17" class="fg">TypeScript</text><text x="122" y="0" font-size="17" class="muted">·</text><text x="150" y="0" font-size="17" class="fg">NestJS</text><text x="230.4" y="0" font-size="17" class="muted">·</text><text x="258.4" y="0" font-size="17" class="fg">Express</text><text x="349.2" y="0" font-size="17" class="muted">·</text><text x="377.2" y="0" font-size="17" class="fg">Prisma</text><text x="457.6" y="0" font-size="17" class="muted">·</text><text x="485.6" y="0" font-size="17" class="fg">Python</text><text x="566" y="0" font-size="17" class="muted">·</text><text x="594" y="0" font-size="17" class="fg">React</text><text x="664" y="0" font-size="17" class="muted">·</text><text x="692" y="0" font-size="17" class="fg">Next.js</text><text x="782.8" y="0" font-size="17" class="muted">·</text><text x="810.8" y="0" font-size="17" class="fg">Tailwind CSS</text><text x="953.5999999999999" y="0" font-size="17" class="muted">·</text><text x="981.5999999999999" y="0" font-size="17" class="fg">PostgreSQL</text><text x="1103.6" y="0" font-size="17" class="muted">·</text><text x="1131.6" y="0" font-size="17" class="fg">Redis</text><text x="1201.6" y="0" font-size="17" class="muted">·</text><text x="1229.6" y="0" font-size="17" class="fg">MongoDB</text><text x="1320.3999999999999" y="0" font-size="17" class="muted">·</text><text x="1348.3999999999999" y="0" font-size="17" class="fg">BullMQ</text><text x="1428.8" y="0" font-size="17" class="muted">·</text><text x="1456.8" y="0" font-size="17" class="fg">Linux</text><text x="1526.8" y="0" font-size="17" class="muted">·</text><text x="1554.8" y="0" font-size="17" class="fg">Docker</text><text x="1635.2" y="0" font-size="17" class="muted">·</text><text x="1663.2" y="0" font-size="17" class="fg">Nginx</text><text x="1733.2" y="0" font-size="17" class="muted">·</text><text x="1761.2" y="0" font-size="17" class="fg">PM2</text><text x="1810.4" y="0" font-size="17" class="muted">·</text><text x="1838.4" y="0" font-size="17" class="fg">Let's Encrypt</text><text x="1991.6000000000001" y="0" font-size="17" class="muted">·</text><text x="2019.6000000000001" y="0" font-size="17" class="fg">AWS</text><text x="2068.8" y="0" font-size="17" class="muted">·</text>
-        <g transform="translate(2097 0)"><text x="0" y="0" font-size="17" class="fg">TypeScript</text><text x="122" y="0" font-size="17" class="muted">·</text><text x="150" y="0" font-size="17" class="fg">NestJS</text><text x="230.4" y="0" font-size="17" class="muted">·</text><text x="258.4" y="0" font-size="17" class="fg">Express</text><text x="349.2" y="0" font-size="17" class="muted">·</text><text x="377.2" y="0" font-size="17" class="fg">Prisma</text><text x="457.6" y="0" font-size="17" class="muted">·</text><text x="485.6" y="0" font-size="17" class="fg">Python</text><text x="566" y="0" font-size="17" class="muted">·</text><text x="594" y="0" font-size="17" class="fg">React</text><text x="664" y="0" font-size="17" class="muted">·</text><text x="692" y="0" font-size="17" class="fg">Next.js</text><text x="782.8" y="0" font-size="17" class="muted">·</text><text x="810.8" y="0" font-size="17" class="fg">Tailwind CSS</text><text x="953.5999999999999" y="0" font-size="17" class="muted">·</text><text x="981.5999999999999" y="0" font-size="17" class="fg">PostgreSQL</text><text x="1103.6" y="0" font-size="17" class="muted">·</text><text x="1131.6" y="0" font-size="17" class="fg">Redis</text><text x="1201.6" y="0" font-size="17" class="muted">·</text><text x="1229.6" y="0" font-size="17" class="fg">MongoDB</text><text x="1320.3999999999999" y="0" font-size="17" class="muted">·</text><text x="1348.3999999999999" y="0" font-size="17" class="fg">BullMQ</text><text x="1428.8" y="0" font-size="17" class="muted">·</text><text x="1456.8" y="0" font-size="17" class="fg">Linux</text><text x="1526.8" y="0" font-size="17" class="muted">·</text><text x="1554.8" y="0" font-size="17" class="fg">Docker</text><text x="1635.2" y="0" font-size="17" class="muted">·</text><text x="1663.2" y="0" font-size="17" class="fg">Nginx</text><text x="1733.2" y="0" font-size="17" class="muted">·</text><text x="1761.2" y="0" font-size="17" class="fg">PM2</text><text x="1810.4" y="0" font-size="17" class="muted">·</text><text x="1838.4" y="0" font-size="17" class="fg">Let's Encrypt</text><text x="1991.6000000000001" y="0" font-size="17" class="muted">·</text><text x="2019.6000000000001" y="0" font-size="17" class="fg">AWS</text><text x="2068.8" y="0" font-size="17" class="muted">·</text></g>
-      </g>
-    </g>
+  
+  <rect x=".5" y=".5" width="719" height="291" rx="6" fill="#020617" stroke="#1e293b"/>
+  <text x="28" y="42" font-size="17" class="prompt">~ $</text><text x="70" y="42" font-size="17" class="fg">cat stack.yml</text>
+  <g class="sel">
+    <rect x="14" y="66" width="692" height="34" rx="4" fill="#60a5fa" fill-opacity=".12"/>
+    <text x="20" y="89" font-size="17" class="prompt">›</text>
   </g>
-  <rect x="112" y="1" width="28" height="74" fill="url(#some-esq)"/>
-  <rect x="656" y="1" width="48" height="74" fill="url(#some-dir)"/>
-  <text x="28" y="46" font-size="17" class="prompt">stack</text>
-  <text x="84" y="46" font-size="17" class="muted">›</text>
+  <text x="40" y="89" font-size="16" class="accent">frontend:</text>
+  <text x="140" y="89" font-size="16" class="fg">React</text>
+  <text x="256" y="89" font-size="16" class="fg">Next.js</text>
+  <text x="346" y="89" font-size="16" class="fg">Tailwind CSS</text>
+  <text x="40" y="129" font-size="16" class="accent">backend:</text>
+  <text x="140" y="129" font-size="16" class="fg">TypeScript</text>
+  <text x="256" y="129" font-size="16" class="fg">NestJS</text>
+  <text x="346" y="129" font-size="16" class="fg">Express</text>
+  <text x="436" y="129" font-size="16" class="fg">Prisma</text>
+  <text x="522" y="129" font-size="16" class="fg">Python</text>
+  <text x="40" y="169" font-size="16" class="accent">dados:</text>
+  <text x="140" y="169" font-size="16" class="fg">PostgreSQL</text>
+  <text x="256" y="169" font-size="16" class="fg">Redis</text>
+  <text x="346" y="169" font-size="16" class="fg">MongoDB</text>
+  <text x="436" y="169" font-size="16" class="fg">BullMQ</text>
+  <text x="40" y="209" font-size="16" class="accent">infra:</text>
+  <text x="140" y="209" font-size="16" class="fg">Linux</text>
+  <text x="256" y="209" font-size="16" class="fg">Docker</text>
+  <text x="346" y="209" font-size="16" class="fg">Nginx</text>
+  <text x="436" y="209" font-size="16" class="fg">PM2</text>
+  <text x="522" y="209" font-size="16" class="fg">Let's Encrypt</text>
+  <text x="40" y="249" font-size="16" class="accent">cloud:</text>
+  <text x="140" y="249" font-size="16" class="fg">AWS Certified Cloud Practitioner</text>
 </svg>
