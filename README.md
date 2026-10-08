@@ -13,20 +13,27 @@
   <img alt="Stack. Frontend: React, Next.js, Tailwind CSS. Backend: TypeScript, NestJS, Express, Prisma, Python. Dados: PostgreSQL, Redis, MongoDB, BullMQ. Infra: Linux, Docker, Nginx, PM2, Let's Encrypt. Cloud: AWS Certified Cloud Practitioner." src="assets/stack-light.svg" width="100%">
 </picture>
 
+<!-- Imagem com link: o <a> precisa ficar dentro de um <p>. Solto no Markdown, o GitHub desmonta o <picture> e troca o link. -->
+<p>
 <a href="https://github.com/victorcsar/oficinaFlow"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projeto-oficinaFlow-dark.svg">
   <img alt="oficinaFlow: gestão de oficina mecânica, com orçamentos, ordens de serviço e estoque." src="assets/projeto-oficinaFlow-light.svg" width="100%">
 </picture></a>
+</p>
 
+<p>
 <a href="https://github.com/victorcsar/cv-web"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projeto-cv-web-dark.svg">
   <img alt="cv-web: meu currículo online, no ar em victorcesar.com.br." src="assets/projeto-cv-web-light.svg" width="100%">
 </picture></a>
+</p>
 
+<p>
 <a href="https://github.com/victorcsar/curriculo"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/projeto-curriculo-dark.svg">
   <img alt="curriculo: o mesmo currículo, em LaTeX." src="assets/projeto-curriculo-light.svg" width="100%">
 </picture></a>
+</p>
 
 <p>
 <a href="https://www.victorcesar.com.br"><picture>
@@ -35,7 +42,7 @@
 </picture></a>
 <a href="https://br.linkedin.com/in/victorcesarbastos"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/contato-linkedin-dark.svg">
-  <img alt="LinkedIn" src="assets/contato-linkedin-light.svg" width="32%">
+  <img alt="LinkedIn: in/victorcesarbastos" src="assets/contato-linkedin-light.svg" width="32%">
 </picture></a>
 <a href="mailto:victorcesagx@gmail.com"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/contato-email-dark.svg">

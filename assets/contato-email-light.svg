@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232 60" width="232" height="60" role="img" aria-label="e-mail">
-  <title>e-mail</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272 60" width="272" height="60" role="img" aria-label="victorcesagx@gmail.com">
+  <title>victorcesagx@gmail.com</title>
   <style>
     text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
     .bg { fill: #f8fafc; }
@@ -14,6 +14,11 @@
 
   </style>
   
-  <rect x=".5" y=".5" width="231" height="59" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
-  <text x="116" y="37" font-size="17" class="accent" text-anchor="middle">e-mail<tspan class="muted"> ↗</tspan></text>
+  <rect x=".5" y=".5" width="271" height="59" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <g fill="none" stroke="#0284c7" stroke-width="1.6" stroke-linejoin="round">
+    <rect x="18.5" y="23.5" width="17" height="13" rx="2"/>
+    <path d="M19.5 25l7.5 6 7.5-6"/>
+  </g>
+  <text x="46" y="35" font-size="14" class="accent">victorcesagx@gmail.com</text>
+  <text x="256" y="35" font-size="14" class="muted" text-anchor="end">↗</text>
 </svg>

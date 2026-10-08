@@ -47,11 +47,12 @@ const projetos = [
   ['curriculo', 'O mesmo currículo, em LaTeX'],
 ];
 
-// O nome do arquivo de cada contato é contato-<id>-<tema>.svg
+// O nome do arquivo de cada contato é contato-<id>-<tema>.svg; o id também escolhe o ícone.
+// O endereço completo do LinkedIn não cabe num terço da largura, por isso só o caminho do perfil.
 const contatos = [
   ['site', 'victorcesar.com.br'],
-  ['linkedin', 'LinkedIn'],
-  ['email', 'e-mail'],
+  ['linkedin', 'in/victorcesarbastos'],
+  ['email', 'victorcesagx@gmail.com'],
 ];
 
 // Tempo de um ciclo do `watch docker ps`, em segundos
@@ -238,12 +239,31 @@ const projeto = ([nome, desc]) => (c) => svg({
 
 // ---------------------------------------------------------------- contatos (três botões lado a lado)
 
-const contato = ([, rotulo]) => (c) => svg({
-  w: 232,
+// Ícones de 18 px centrados em (27, 30), no traço da cor do prompt.
+const icones = {
+  site: (c) => `<g fill="none" stroke="${c.prompt}" stroke-width="1.6">
+    <circle cx="27" cy="30" r="8.5"/>
+    <ellipse cx="27" cy="30" rx="3.8" ry="8.5"/>
+    <path d="M18.5 30h17"/>
+  </g>`,
+  linkedin: (c) => `<rect x="18" y="21" width="18" height="18" rx="3" fill="${c.prompt}"/>
+  <text x="27" y="34.5" font-size="12" font-weight="700" fill="${c.bg}" text-anchor="middle" style="font-family: Arial, Helvetica, sans-serif">in</text>`,
+  email: (c) => `<g fill="none" stroke="${c.prompt}" stroke-width="1.6" stroke-linejoin="round">
+    <rect x="18.5" y="23.5" width="17" height="13" rx="2"/>
+    <path d="M19.5 25l7.5 6 7.5-6"/>
+  </g>`,
+};
+
+const LARG_CONTATO = 272;
+
+const contato = ([id, valor]) => (c) => svg({
+  w: LARG_CONTATO,
   h: 60,
   c,
-  label: rotulo,
-  corpo: txt(116, 37, 'accent', 17, `${esc(rotulo)}<tspan class="muted"> ↗</tspan>`, ' text-anchor="middle"'),
+  label: valor,
+  corpo: `${icones[id](c)}
+  ${txt(46, 35, 'accent', 14, esc(valor))}
+  ${txt(LARG_CONTATO - 16, 35, 'muted', 14, '↗', ' text-anchor="end"')}`,
 });
 
 // ---------------------------------------------------------------- saída
