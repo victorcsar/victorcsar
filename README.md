@@ -10,7 +10,12 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg">
-  <img alt="Stack. Frontend: React, Next.js, Tailwind CSS. Backend: TypeScript, NestJS, Express, Prisma, Python. Dados: PostgreSQL, Redis, MongoDB, BullMQ. Infra: Linux, Docker, Nginx, PM2, Let's Encrypt. Cloud: AWS Certified Cloud Practitioner." src="assets/stack-light.svg" width="100%">
+  <img alt="Stack. Frontend: React, Next.js, Tailwind CSS. Backend: TypeScript, NestJS, Express, Prisma, Python. Dados: PostgreSQL, Redis, MongoDB, BullMQ. Infra: Linux, Docker, Nginx, PM2, Let's Encrypt." src="assets/stack-light.svg" width="100%">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/formacao-dark.svg">
+  <img alt="Formação. Em andamento: bacharelado em Engenharia de Software (Uniasselvi), previsão dez/2026; técnico em Redes de Computadores (IF Baiano), previsão nov/2026. Concluídos: pós-graduação em Ciência de Dados (Uniasselvi), 2026; pós-graduação em Segurança da Informação (Uniasselvi), 2026; tecnólogo em Análise e Desenvolvimento de Sistemas (Uniasselvi), 2025; certificação AWS Cloud Practitioner, 2024." src="assets/formacao-light.svg" width="100%">
 </picture>
 
 <!-- Imagem com link: o <a> precisa ficar dentro de um <p>. Solto no Markdown, o GitHub desmonta o <picture> e troca o link. -->

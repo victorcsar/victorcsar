@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 392" width="720" height="392" role="img" aria-label="Formação. engenharia-de-software, bacharelado, Uniasselvi: em andamento, previsão dez/2026. redes-de-computadores, técnico, IF Baiano: em andamento, previsão nov/2026. ciencia-de-dados, pós-graduação, Uniasselvi: concluído em 2026. seguranca-da-informacao, pós-graduação, Uniasselvi: concluído em 2026. analise-desenv-sistemas, tecnólogo, Uniasselvi: concluído em 2025. aws-cloud-practitioner, certificação, AWS: concluído em 2024.">
+  <title>Formação. engenharia-de-software, bacharelado, Uniasselvi: em andamento, previsão dez/2026. redes-de-computadores, técnico, IF Baiano: em andamento, previsão nov/2026. ciencia-de-dados, pós-graduação, Uniasselvi: concluído em 2026. seguranca-da-informacao, pós-graduação, Uniasselvi: concluído em 2026. analise-desenv-sistemas, tecnólogo, Uniasselvi: concluído em 2025. aws-cloud-practitioner, certificação, AWS: concluído em 2024.</title>
+  <style>
+    text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
+    .bg { fill: #f8fafc; }
+    .rule { fill: #e2e8f0; }
+    .fg { fill: #0f172a; }
+    .muted { fill: #64748b; }
+    .prompt { fill: #0284c7; }
+    .accent { fill: #2563eb; }
+    .ok { fill: #16a34a; }
+    .logo { fill: #0f172a; }
+    .b { font-weight: 600; }
+
+    .anda { animation: anda 1.8s ease-in-out var(--d) infinite; }
+    @keyframes anda { to { transform: translateX(96px); } }
+    @media (prefers-reduced-motion: reduce) { .anda { animation: none; transform: translateX(48px); } }
+  </style>
+  <defs><clipPath id="trilho0"><rect x="530" y="157" width="70" height="8" rx="2"/></clipPath><clipPath id="trilho1"><rect x="530" y="199" width="70" height="8" rx="2"/></clipPath></defs>
+  <rect x=".5" y=".5" width="719" height="391" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <text x="28" y="42" font-size="17" class="prompt">~ $</text><text x="70" y="42" font-size="17" class="fg">apt list formacao</text>
+  <text x="28" y="70" font-size="15" class="muted">Listando... Pronto</text>
+  <rect x="28" y="86" width="664" height="2" class="rule"/>
+
+  <text x="28" y="124" font-size="13" class="muted" letter-spacing="1.5">CURSO</text>
+  <text x="280" y="124" font-size="13" class="muted" letter-spacing="1.5">TIPO</text>
+  <text x="530" y="124" font-size="13" class="muted" letter-spacing="1.5">STATUS</text>
+
+  <text x="28" y="168" font-size="17" class="fg b">engenharia-de-software</text>
+  <text x="280" y="168" font-size="15" class="fg">bacharelado<tspan class="muted"> · Uniasselvi</tspan></text>
+  <rect x="530" y="157" width="70" height="8" rx="2" class="rule"/>
+  <g clip-path="url(#trilho0)"><rect x="504" y="157" width="26" height="8" class="accent anda" style="--d: 0s"/></g>
+  <text x="610" y="168" font-size="15" class="accent">dez/2026</text>
+  <text x="28" y="210" font-size="17" class="fg b">redes-de-computadores</text>
+  <text x="280" y="210" font-size="15" class="fg">técnico<tspan class="muted"> · IF Baiano</tspan></text>
+  <rect x="530" y="199" width="70" height="8" rx="2" class="rule"/>
+  <g clip-path="url(#trilho1)"><rect x="504" y="199" width="26" height="8" class="accent anda" style="--d: 0.5s"/></g>
+  <text x="610" y="210" font-size="15" class="accent">nov/2026</text>
+  <text x="28" y="252" font-size="17" class="fg b">ciencia-de-dados</text>
+  <text x="280" y="252" font-size="15" class="fg">pós-graduação<tspan class="muted"> · Uniasselvi</tspan></text>
+  <circle cx="536" cy="246" r="5" class="ok"/>
+  <text x="548" y="252" font-size="15" class="ok">concluído 2026</text>
+  <text x="28" y="294" font-size="17" class="fg b">seguranca-da-informacao</text>
+  <text x="280" y="294" font-size="15" class="fg">pós-graduação<tspan class="muted"> · Uniasselvi</tspan></text>
+  <circle cx="536" cy="288" r="5" class="ok"/>
+  <text x="548" y="294" font-size="15" class="ok">concluído 2026</text>
+  <text x="28" y="336" font-size="17" class="fg b">analise-desenv-sistemas</text>
+  <text x="280" y="336" font-size="15" class="fg">tecnólogo<tspan class="muted"> · Uniasselvi</tspan></text>
+  <circle cx="536" cy="330" r="5" class="ok"/>
+  <text x="548" y="336" font-size="15" class="ok">concluído 2025</text>
+  <text x="28" y="378" font-size="17" class="fg b">aws-cloud-practitioner</text>
+  <text x="280" y="378" font-size="15" class="fg">certificação<tspan class="muted"> · AWS</tspan></text>
+  <circle cx="536" cy="372" r="5" class="ok"/>
+  <text x="548" y="378" font-size="15" class="ok">concluído 2024</text>
+</svg>

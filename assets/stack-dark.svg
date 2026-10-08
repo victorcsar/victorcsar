@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 292" width="720" height="292" role="img" aria-label="Stack. frontend: React, Next.js, Tailwind CSS. backend: TypeScript, NestJS, Express, Prisma, Python. dados: PostgreSQL, Redis, MongoDB, BullMQ. infra: Linux, Docker, Nginx, PM2, Let's Encrypt. cloud: AWS Certified Cloud Practitioner.">
-  <title>Stack. frontend: React, Next.js, Tailwind CSS. backend: TypeScript, NestJS, Express, Prisma, Python. dados: PostgreSQL, Redis, MongoDB, BullMQ. infra: Linux, Docker, Nginx, PM2, Let's Encrypt. cloud: AWS Certified Cloud Practitioner.</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 252" width="720" height="252" role="img" aria-label="Stack. frontend: React, Next.js, Tailwind CSS. backend: TypeScript, NestJS, Express, Prisma, Python. dados: PostgreSQL, Redis, MongoDB, BullMQ. infra: Linux, Docker, Nginx, PM2, Let's Encrypt.">
+  <title>Stack. frontend: React, Next.js, Tailwind CSS. backend: TypeScript, NestJS, Express, Prisma, Python. dados: PostgreSQL, Redis, MongoDB, BullMQ. infra: Linux, Docker, Nginx, PM2, Let's Encrypt.</title>
   <style>
     text { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace; }
     .bg { fill: #020617; }
@@ -12,12 +12,12 @@
     .logo { fill: #ffffff; }
     .b { font-weight: 600; }
 
-    .sel { animation: sel 12.5s steps(5) infinite; }
-    @keyframes sel { to { transform: translateY(200px); } }
+    .sel { animation: sel 10s steps(4) infinite; }
+    @keyframes sel { to { transform: translateY(160px); } }
     @media (prefers-reduced-motion: reduce) { .sel { animation: none; } }
   </style>
   
-  <rect x=".5" y=".5" width="719" height="291" rx="6" fill="#020617" stroke="#1e293b"/>
+  <rect x=".5" y=".5" width="719" height="251" rx="6" fill="#020617" stroke="#1e293b"/>
   <text x="28" y="42" font-size="17" class="prompt">~ $</text><text x="70" y="42" font-size="17" class="fg">cat stack.yml</text>
   <g class="sel">
     <rect x="14" y="66" width="692" height="34" rx="4" fill="#60a5fa" fill-opacity=".12"/>
@@ -44,6 +44,4 @@
   <text x="346" y="209" font-size="16" class="fg">Nginx</text>
   <text x="436" y="209" font-size="16" class="fg">PM2</text>
   <text x="522" y="209" font-size="16" class="fg">Let's Encrypt</text>
-  <text x="40" y="249" font-size="16" class="accent">cloud:</text>
-  <text x="140" y="249" font-size="16" class="fg">AWS Certified Cloud Practitioner</text>
 </svg>

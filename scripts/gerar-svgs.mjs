@@ -1,7 +1,7 @@
 // Gera os painéis SVG do README em versão clara e escura.
 // Uso: node scripts/gerar-svgs.mjs
 //
-// O conteúdo (textos, sistemas, stack, projetos e contatos) fica todo aqui. Depois de mudar
+// O conteúdo (textos, sistemas, stack, formação, projetos e contatos) fica todo aqui. Depois de mudar
 // algo, rode o script de novo e commite os arquivos de assets/. Se mudar um texto, confira
 // também o texto alternativo (alt) da imagem no README.md.
 
@@ -37,7 +37,16 @@ const stack = [
   ['backend', ['TypeScript', 'NestJS', 'Express', 'Prisma', 'Python']],
   ['dados', ['PostgreSQL', 'Redis', 'MongoDB', 'BullMQ']],
   ['infra', ['Linux', 'Docker', 'Nginx', 'PM2', "Let's Encrypt"]],
-  ['cloud', ['AWS Certified Cloud Practitioner']],
+];
+
+// [nome, tipo, instituição, conclusão, em andamento?]
+const formacao = [
+  ['engenharia-de-software', 'bacharelado', 'Uniasselvi', 'dez/2026', true],
+  ['redes-de-computadores', 'técnico', 'IF Baiano', 'nov/2026', true],
+  ['ciencia-de-dados', 'pós-graduação', 'Uniasselvi', '2026', false],
+  ['seguranca-da-informacao', 'pós-graduação', 'Uniasselvi', '2026', false],
+  ['analise-desenv-sistemas', 'tecnólogo', 'Uniasselvi', '2025', false],
+  ['aws-cloud-practitioner', 'certificação', 'AWS', '2024', false],
 ];
 
 // O nome do arquivo de cada projeto é projeto-<nome>-<tema>.svg
@@ -226,6 +235,47 @@ ${stack.map(([camada, itens], i) => {
   });
 };
 
+// ---------------------------------------------------------------- apt list formacao
+
+// Os cursos em andamento têm uma barra indeterminada: um bloco corre dentro do trilho,
+// sem porcentagem inventada. Os concluídos têm o ponto verde, como o "up" do docker ps.
+const BARRA = { x: 530, w: 70, bloco: 26 };
+const animFormacao = `
+    .anda { animation: anda 1.8s ease-in-out var(--d) infinite; }
+    @keyframes anda { to { transform: translateX(${BARRA.w + BARRA.bloco}px); } }
+    @media (prefers-reduced-motion: reduce) { .anda { animation: none; transform: translateX(${(BARRA.w + BARRA.bloco) / 2}px); } }`;
+
+const formacaoSvg = (c) => svg({
+  h: 140 + formacao.length * 42,
+  c,
+  label: 'Formação. ' + formacao.map(([nome, tipo, onde, quando, cursando]) =>
+    `${nome}, ${tipo}, ${onde}: ${cursando ? `em andamento, previsão ${quando}` : `concluído em ${quando}`}.`).join(' '),
+  animacoes: animFormacao,
+  defs: formacao.map(([, , , , cursando], i) => cursando
+    ? `<clipPath id="trilho${i}"><rect x="${BARRA.x}" y="${168 + i * 42 - 11}" width="${BARRA.w}" height="8" rx="2"/></clipPath>`
+    : '').join(''),
+  corpo: `${prompt(42, 'apt list formacao')}
+  ${txt(28, 70, 'muted', 15, 'Listando... Pronto')}
+  <rect x="28" y="86" width="664" height="2" class="rule"/>
+
+  ${txt(28, 124, 'muted', 13, 'CURSO', ' letter-spacing="1.5"')}
+  ${txt(280, 124, 'muted', 13, 'TIPO', ' letter-spacing="1.5"')}
+  ${txt(BARRA.x, 124, 'muted', 13, 'STATUS', ' letter-spacing="1.5"')}
+
+${formacao.map(([nome, tipo, onde, quando, cursando], i) => {
+  const y = 168 + i * 42;
+  const status = cursando
+    ? `<rect x="${BARRA.x}" y="${y - 11}" width="${BARRA.w}" height="8" rx="2" class="rule"/>
+  <g clip-path="url(#trilho${i})"><rect x="${BARRA.x - BARRA.bloco}" y="${y - 11}" width="${BARRA.bloco}" height="8" class="accent anda" style="--d: ${i * 0.5}s"/></g>
+  ${txt(BARRA.x + BARRA.w + 10, y, 'accent', 15, esc(quando))}`
+    : `<circle cx="${BARRA.x + 6}" cy="${y - 6}" r="5" class="ok"/>
+  ${txt(BARRA.x + 18, y, 'ok', 15, `concluído ${esc(quando)}`)}`;
+  return `  ${txt(28, y, 'fg b', 17, esc(nome))}
+  ${txt(280, y, 'fg', 15, `${esc(tipo)}<tspan class="muted"> · ${esc(onde)}</tspan>`)}
+  ${status}`;
+}).join('\n')}`,
+});
+
 // ---------------------------------------------------------------- projetos (uma imagem por link)
 
 const projeto = ([nome, desc]) => (c) => svg({
@@ -272,6 +322,7 @@ const paineis = {
   header,
   'docker-ps': dockerPs,
   stack: stackSvg,
+  formacao: formacaoSvg,
   ...Object.fromEntries(projetos.map((p) => [`projeto-${p[0]}`, projeto(p)])),
   ...Object.fromEntries(contatos.map((p) => [`contato-${p[0]}`, contato(p)])),
 };
